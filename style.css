@@ -8,10 +8,10 @@ body {
     font-family: 'Manrope', sans-serif;
     background-color: hsl(210, 46%, 95%);
     color: hsl(217, 19%, 35%);
-    /*    display: flex;
-    flex-direction: column;
-     justify-content: center;
-    align-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 h1 {
@@ -55,19 +55,15 @@ p {
     object-fit: cover;
 }
 
-.intro,
-.social-bar {
+.intro {
     margin: auto 2.8em;
-}
-
-.intro{
     margin-bottom: 1em;
 }
 
 .social-bar {
     display: flex;
-    padding: 1em 0;
-    /* min-height: 75px; */
+    padding: 1em 2.8em;
+    position: relative;
 }
 
 .avatar {
@@ -99,44 +95,69 @@ p {
     border-radius: 50%;
     border: none;
     margin: auto 0 auto auto;
+    z-index: 999;
 }
-
-
-
-/* After share button clicked */
-
-/* 
-
-.share-btn {
-    margin: auto 2.8em auto auto;
-}
-*/
 
 .share-icons {
-    margin-left: 2.8em;
+    position: absolute;
     display: flex;
     align-items: center;
-    width: 60%;
+    width: 100%;
+    background-color: hsl(217, 19%, 35%);
 }
 
 img.icon {
     display: block;
     margin-left: 1em;
-} 
-
-
-
-
-
-.hidden{
-    display: none;
 }
 
-.toggleSocial{
+.toggleSocial {
     background-color: hsl(217, 19%, 35%);
     margin: 0;
 }
 
-.buttonFix{
+.buttonFix {
     margin: auto 2.8em auto auto;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .card {
+        max-width: 680px;
+        flex-direction: row;
+        overflow: visible;
+    }
+
+    .social-bar {
+        background-color: white;
+    }
+
+    .img-container {
+        width: 40%;
+    }
+
+    .wrapper {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    .article-img {
+        height: 100%;
+    }
+
+    .share-icons {
+        margin: auto;
+        left: 240px;
+        bottom: 50px;
+        padding: .5em 2.5em;
+        border-radius: 10px;
+        width: fit-content;
+    }
 }
